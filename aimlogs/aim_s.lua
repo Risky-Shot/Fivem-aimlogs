@@ -1,5 +1,7 @@
 local hook = 'YOUR_WEBHOOK_LINK'
 
+local dataTable = {}
+
 RegisterServerEvent('aimlogs:log')
 AddEventHandler('aimlogs:log', function(pedId)
     local _source = source
