@@ -14,8 +14,8 @@ Citizen.CreateThread(function()
 	while true do
 		Citizen.Wait(60000)
 		for k,v in pairs(dataTable) do
-            if #dataTable ~= nil then
-                PerformHttpRequest(hook, function(err, text, headers) end, 'POST', json.encode({embeds={{title="_**Aim Logs**__",description="\nPlayer name: "..v.pName.."\nis aiming: "..v.aiming.."",color=16711680}}}), { ['Content-Type'] = 'application/json' }) 
+            		if #dataTable ~= nil then
+                		PerformHttpRequest(hook, function(err, text, headers) end, 'POST', json.encode({embeds={{title="_**Aim Logs**__",description="\nPlayer name: "..v.pName.."\nis aiming: "..v.aiming.."",color=16711680}}}), { ['Content-Type'] = 'application/json' }) 
 			end
 		end
         dataTable = {}
