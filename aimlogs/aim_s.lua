@@ -17,6 +17,7 @@ Citizen.CreateThread(function()
             		if #dataTable ~= nil then
                 		PerformHttpRequest(hook, function(err, text, headers) end, 'POST', json.encode({embeds={{title="_**Aim Logs**__",description="\nPlayer name: "..v.pName.."\nis aiming: "..v.aiming.."",color=16711680}}}), { ['Content-Type'] = 'application/json' }) 
 			end
+			Citizen.Wait(1000)
 		end
         dataTable = {}
 	end
